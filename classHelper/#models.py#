@@ -1,0 +1,30 @@
+from django.db import models
+from django.contrib.auth.models import User
+
+ROLES = [('t','teacher'), ('s','student'), ('a','admin')]
+
+# Create your models here.
+class ClassUser(models.Model):
+    created = models.DateTimeField(auto_now_add = True)
+    user = models.OneToOneField(User)
+    role = models.CharField(max_length = 100, choices = ROLES, default = 'student')
+
+    class Meta:
+        ordering = ('created',)
+
+class ProblemSet(models.Model):
+    problemSetCode = models.CharField(primary_key = True,max_length=6)
+    problemSetDesc = models.CharField(max_length = 100)
+    creater = models.ForeignKey(ClassUser, related_name = 'problemSets')
+    problemsAns = models.CharField(max_length = 100)
+
+class Problem(models.Model):
+    created = models.DateTimeField(auto_now_add = True)
+    problemDesc = models.TextField()
+    problemSelect = models.TextField()
+    problemSet = models.ForeignKey(ProblemSet, related_name = 'problems')
+
+class Solution(models.Model):
+    solver = models.ForeignKey(ClassUser, related_name = 'solutions')
+    problems = models.ForeignKey(ProblemSet, related_name = 'solutions')
+    ans = models.CharField(max_length = 100)
