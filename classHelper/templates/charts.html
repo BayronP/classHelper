@@ -1,0 +1,383 @@
+<html>
+
+<head>
+  <title>
+   答题情况统计
+ </title>
+ <!--<link href="http://fonts.googleapis.com/css?family=Lato:100,300,400,700" media="all" rel="stylesheet" type="text/css" />-->
+ <link href="/static/theme/stylesheets/bootstrap.min.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/font-awesome.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/se7en-font.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/isotope.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/jquery.fancybox.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/fullcalendar.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/wizard.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/select2.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/morris.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/datatables.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/datepicker.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/timepicker.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/colorpicker.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/bootstrap-switch.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/daterange-picker.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/typeahead.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/summernote.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/pygments.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/style.css" media="all" rel="stylesheet" type="text/css" />
+ <link href="/static/theme/stylesheets/color/green.css" media="all" rel="alternate stylesheet" title="green-theme" type="text/css" />
+ <link href="/static/theme/stylesheets/color/orange.css" media="all" rel="alternate stylesheet" title="orange-theme" type="text/css" />
+ <link href="/static/theme/stylesheets/color/magenta.css" media="all" rel="alternate stylesheet" title="magenta-theme" type="text/css" />
+ <link href="/static/theme/stylesheets/color/gray.css" media="all" rel="alternate stylesheet" title="gray-theme" type="text/css" />
+ <script src="/static/theme/javascripts/jquery.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery-ui.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/bootstrap.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/raphael.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/selectivizr-min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.mousewheel.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.vmap.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.vmap.sampledata.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.vmap.world.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.bootstrap.wizard.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/fullcalendar.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/gcal.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.dataTables.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/datatable-editable.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.easy-pie-chart.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/excanvas.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.isotope.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/isotope_extras.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/modernizr.custom.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.fancybox.pack.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/select2.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/styleswitcher.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/wysiwyg.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/summernote.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.inputmask.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.validate.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/bootstrap-fileupload.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/bootstrap-datepicker.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/bootstrap-timepicker.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/bootstrap-colorpicker.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/bootstrap-switch.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/typeahead.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/daterange-picker.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/date.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/morris.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/skycons.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/fitvids.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/jquery.sparkline.min.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/main.js" type="text/javascript"></script>
+ <script src="/static/theme/javascripts/respond.js" type="text/javascript"></script>
+
+ <meta content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" name="viewport">
+</head>
+<body>
+  <div class="modal-shiftfix">
+    <!-- Navigation -->
+       <div class="navbar navbar-fixed-top scroll-hide">
+      <div class="container-fluid top-bar">
+        <div class="pull-right">
+          <ul class="nav navbar-nav pull-right">
+
+            {% if user.is_authenticated %}
+            <li class="dropdown user hidden-xs">
+              <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                {{ user.username }}
+
+                <b class="caret"></b></a>
+                <ul class="dropdown-menu">
+                  <li><a href="/api-auth/logout/?next=/login">
+                    <i class="icon-signout"></i>Logout</a>
+                  </li>
+                </ul>
+              </li>
+              {% else %}
+              <li class="user hidden-xs">
+                <a href="/login">login</a>
+              </li>
+              {% endif %}
+            </ul>
+          </div>
+        </div>
+        <div class="container-fluid main-nav clearfix">
+          <div class="nav-collapse">
+            <ul class="nav">
+              <li>
+                <a class="current" href="/home"><span aria-hidden="true" class="se7en-home"></span>主页</a>
+              </li>
+
+
+              <li><a href="/add">
+                <span aria-hidden="true" class="se7en-forms"></span>添加题集</a>
+              </li>
+
+
+                <li><a href="/add_pro">
+                <span aria-hidden="true" class="se7en-tables"></span>添加题目</a>
+              </li>
+
+              <li><a href="/chart">
+                <span aria-hidden="true" class="se7en-charts"></span>答题统计</a>
+              </li>
+
+
+            </ul>
+          </div>
+        </div>
+      </div>
+    <!-- End Navigation -->
+
+
+    <div class="container-fluid main-content">
+      <div class="page-title chart-container">
+        <h1>
+          Charts
+        </h1>
+      </div>
+      <div class="row">
+        <!-- Line Chart -->
+
+        <!-- Line Chart -->
+
+        <!-- end Line Chart -->
+      </div>
+      <div class="row">
+        <!-- Donut Charts -->
+
+        <!-- end Donut Charts --><!-- Pie Chart -->
+        <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第一题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart0"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第二题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart1"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第三题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart2"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第四题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart3"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第五题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart4"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第六题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart5"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第七题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart6"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+          <div class="col-lg-4">
+          <div class="widget-container">
+            <div class="heading">
+              <i class="icon-bar-chart"></i>第八题
+            </div>
+            <div class="widget-content padded">
+              <div class="pie-chart">
+                <div id="pie-chart7"></div>
+                <ul class="chart-key">
+                  <li>
+                    <span class="green"></span>选项A
+                  </li>
+                  <li>
+                    <span class="orange"></span>选项B
+                  </li>
+                  <li>
+                    <span class="red"></span>选项C
+                  </li>
+                  <li>
+                    <span class="blue"></span>选项D
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- end Pie Chart -->
+      </div>
+      <div class="row">
+        <!-- Composite Graph -->
+
+        <!-- end Composite Graph --><!-- Composite Graph -->
+
+        <!-- end Composite Graph -->
+      </div>
+      <!-- Line Chart:Morris -->
+      <div class="row">
+
+        <!-- Bar Charts:Morris -->        
+
+      </div>
+      <div class="row">
+        <!-- Area Charts:Morris --> 
+
+        <!-- Area Charts:Morris --><!-- Donut Charts:Morris -->
+
+        <!-- Donut Charts:Morris -->
+      </div>
+    </div>
+  </div>
+  <script src="/static/js/chart.js"></script>
+</body>
+
+</html>
