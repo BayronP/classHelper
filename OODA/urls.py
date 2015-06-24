@@ -15,10 +15,18 @@ Including another URLconf
 """
 from django.conf.urls import include, url
 from django.contrib import admin
+from classHelper.views import *
+
 
 urlpatterns = [
     url(r'^', include('classHelper.urls')),
     url(r'^admin/', include(admin.site.urls)),
+    url(r'^home/$',test),
+    url(r'^login/$',login),
+    url(r'^chart/$',chart),
+    url(r'^my/$', my_test),
+    url(r'^add/$',add_problem),
+    url(r'^add_pro/$',add_a_problem),
 ]
 
 urlpatterns += [
